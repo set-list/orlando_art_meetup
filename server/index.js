@@ -1,6 +1,7 @@
 const express = require('express');
 const createError = require('http-errors');
 const path = require('path');
+const dirname = process.cwd();
 const bodyParser = require('body-parser');
 const configs = require('./config');
 const SpeakerService = require('./services/SpeakerService');
@@ -16,7 +17,7 @@ app.set('view engine', 'pug');
 if (app.get('env') === 'development') {
     app.locals.pretty = true;
 }
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(`${dirname}`, '/server','/views'));
 app.locals.title = config.sitename;
 
 const routes = require('./routes');
