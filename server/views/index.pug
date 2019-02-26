@@ -1,0 +1,31 @@
+extends layout/index
+block speakerslist
+  include includes/speakerslist
+block content    
+  #home.container
+    .row
+      .col-sm-8
+        .maincontent
+          article.article
+            h1.article-title Who are we?
+            p
+              | The Orlando Art Academy gets hundreds of submissions every year for student artists interested in participating in the OMA
+              | exhibits, and selects approximately 30 distinct pieces for display. In addition, 8 artists are honored as 
+              | Featured Artists - each being granted his or her own exhibit to display entire collections or themed pieces.
+            p
+              | Each Featured Artist has an opportunity to speak at one of our meetups and share his or   her vision, perspective,
+              | and techniques with attendees on a more personal level than at our large conference. Many past student artists who were featured at OMA have  
+              |  gone on to brilliant careers in art.
+          // article
+          article.article
+            h1.article-title Get Busy!
+            p
+              | If you want to keep up with what's going on with the group,
+              a(href='http://www.meetup.com/oaameet') join our meetup group
+              | ,
+              a(href='http://www.twitter.com/oaameet') follow us on twitter
+              | . If you're in FaceBook, you can also
+              a(href='http://www.facebook.com/oaameet') join our FaceBook group
+              | .
+
+      include includes/sidebar
