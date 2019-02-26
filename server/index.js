@@ -12,7 +12,7 @@ const config = configs[app.get('env')];
 
 const speakerService = new SpeakerService(config.data.speakers);
 const feedbackService = new FeedbackService(config.data.feedback);
-
+app.set('port', (process.env.PORT || 3000));
 app.set('view engine', 'pug');
 if (app.get('env') === 'development') {
     app.locals.pretty = true;
@@ -57,6 +57,6 @@ app.use((err, req, res, next) => {
     return res.render('error');
 });
 
-app.listen(3000);
+app.listen(app.get('port'));
 
 module.export = app;
