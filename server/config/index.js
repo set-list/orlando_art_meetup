@@ -11,8 +11,8 @@ module.exports = {
   production: {
     sitename: 'Orlando Art Meetups',
     data: {
-      speakers: path.join(`${dirname}`, '/data/speakers.json'),
-      feedback: path.join(`${dirname}`, '/data/feedback.json'),
+      speakers: path.join(`${dirname}`, '/server','/data/speakers.json'),
+      feedback: path.join(`${dirname}`, '/server','/data/feedback.json'),
     }
   },
 }
